@@ -1,0 +1,148 @@
+<!doctype html>
+
+<head>
+  <title>Raima Saha</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+  <div class="container mx-auto p-9">
+    <nav>
+      <ul class="flex justify-center p-3">
+        <a class="p-6 hover:text-green-400">Home</a>
+        <a class="p-6 hover:text-blue-500" href="#about">About Me</a>
+        <a class="p-6 hover:text-pink-500" href="#projects">Projects</a>
+        <a class="p-6 hover:text-cyan-500" href="#experience">Experience</a>
+        <a class="p-6 hover:text-indigo-500" href="#skills">Skills</a>
+      </ul>
+    </nav>
+    <section class="p-1" id="about">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-2">Raima Saha</h1>
+      <p class="text-lg text-emerald-700 mb-6">
+        B.S. in Computer Science, Digital Narrative and Interactive Design
+      </p>
+      <h2 id="about" class="font-bold">About Me</h2>
+      <img
+        src="rs-picture.png"
+        alt="Picture of Raima Saha"
+        class="h-100 left mx-auto mb-4 border-blue-500 shadow-xl"
+      />
+      <p>
+        Hi! My name is Raima and I'm a CS and DNID double major at the
+        University of Pittsburgh entering my sophomore year. I love blending my
+        technical and creative prowess to create new and beautiful things. When
+        I'm not building, you can find me playing squash, drawing, reading, or
+        eating sushi!
+      </p>
+    </section>
+    <section id="projects" class="p-1">
+      <h2 class="font-bold">Projects</h2>
+      <section id="project" class="">
+        <h3 class="font-underline text-emerald-700">Leetcode Dashboard</h3>
+        <ul class="p-4">
+          <li class="list-disc">
+            Built a full-stack LeetCode study dashboard that syncs submission
+            data via LeetCode's GraphQL API, schedules problem reviews using the
+            SM-2 spaced repetition algorithm, and generates personalized daily
+            study plans by analyzing per-topic failure rates across 6 database
+            tables
+          </li>
+          <li class="list-disc">
+            Integrated an AI tutoring system using Anthropic Claude with 6
+            custom tool-calling functions, enabling the model to query real user
+            data before responding, and containerized the application with a
+            multi-stage Docker build for deployment on Google Cloud Run
+          </li>
+        </ul>
+      </section>
+      <section id="project" class="">
+        <h3 class="font-underline text-emerald-700">
+          GlassSlipper.ai – Image Analysis Tool
+        </h3>
+        <ul class="p-4">
+          <li class="list-disc">
+            Built a Python service integrating external APIs to transform raw
+            inputs into structured outputs; improved reliability via schema
+            tightening and edge-case handling.
+          </li>
+          <li class="list-disc">
+            Documented failure modes and fixes to make downstream behavior
+            predictable for the frontend and users.
+          </li>
+        </ul>
+      </section>
+      <section id="project" class="">
+        <h3 class="font-underline text-emerald-700">
+          Book Out Below! – Book Blog
+        </h3>
+        <ul class="p-4">
+          <li class="list-disc">
+            Built and deployed a book blog with categorized posts and
+            keyword-based search using GitHub Pages, Jekyll, and Ruby.
+          </li>
+          <li class="list-disc">
+            Designed site layout and branding elements, including a custom logo
+            created in Adobe Illustrator.
+          </li>
+        </ul>
+      </section>
+    </section>
+    <section id="experience" class="p-">
+      <h2 class="font-bold">Experience</h2>
+      <h3 class="text-emerald-700">
+        Itinera: Historical Travel and Digital Humanities
+      </h3>
+      <h4 class="text-sm">Undergraduate Research Assistant</h4>
+      <ul class="p-4">
+        <li class="list-disc">
+          Maintained data quality through validation and normalization steps;
+          documented changes to keep datasets consistent over time.
+        </li>
+        <li class="list-disc">
+          Produced stakeholder-ready visual outputs and communicated updates
+          clearly in written documentation.
+        </li>
+      </ul>
+      <h3 class="text-emerald-700">Pitt Business FinTech Lab</h3>
+      <h4 class="text-sm">UI/UX / Product Management Intern</h4>
+      <ul class="p-4">
+        <li class="list-disc">
+          Translated requirements into user flows and structured deliverables;
+          collaborated in iterative cycles and documented decisions/changes.
+        </li>
+        <li class="list-disc">
+          Clarified edge cases with teammates to keep execution aligned and
+          maintainable.
+        </li>
+      </ul>
+    </section>
+    <section class="p-1">
+    <h2 id="skills" class="font-bold">Skills</h2>
+    <ul>
+      <li class=" my-3 px-3 py-2 rounded-lg border-green-400/50 border-4 shadow-lg">
+        <h5 class="font-bold py-1">Frontend</h5>JavaScript, HTML, CSS, React, responsive UI, browser DevTools
+        debugging
+      </li>
+      <li class=" my-3 px-3 py-2 rounded-lg border-blue-500/50 border-4 shadow-lg">
+        <h5 class="font-bold py-1">Backend/Data</h5> Python, SQL, REST APIs, HTTP/JSON, data
+        validation/cleaning (pandas, NumPy), d3.js, p5.js
+      </li>
+      <li class=" my-3 px-3 py-2 rounded-lg border-pink-500/50 border-4 shadow-lg"><h5 class="font-bold py-1">Databases</h5> Postgres (Supabase) and relational concepts, SQLite</li>
+      <li class=" my-3 px-3 py-2 rounded-lg border-cyan-500/50 border-4 shadow-lg">
+        <h5 class="font-bold py-1">Tools/Workflow</h5> Git, GitHub, documentation, iterative delivery, Docker,
+        Google Cloud Run, CI/CD
+      </li>
+      <li class=" my-3 px-3 py-2 rounded-lg border-indigo-600/50 border-4 shadow-lg"><h5 class="font-bold" py-1>AI-assisted Development</h5> Claude Code</li>
+    </ul>
+    </section>
+  </div>
+  <footer
+    class="flex justify-between items-center p-4 bg-gray-900 text-gray-400"
+  >
+    <ul class="flex flex-wrap justify-center gap-6">
+      <li><a href="https://linkedin.com" class="hover:text-white" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      <li><a href="https://google.com" class="hover:text-white" target="_blank" rel="noopener noreferrer">Email</a></li>
+    </ul>
+    <section class="align-left">Raima Saha © 2026</section>
+  </footer>
+</body>
