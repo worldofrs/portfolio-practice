@@ -1,3 +1,5 @@
+// theme switch functionality
+
 const themeSwitch = document.getElementById('theme-switch');
 const themeText = document.getElementById('theme-text'); // Targets the text element
 
@@ -27,3 +29,27 @@ themeSwitch.addEventListener('change', () => {
     themeText.textContent = 'Light Mode'; // Changes text to Light Mode
   }
 });
+
+// skill carousel functionality
+
+const track = document.getElementById("carousel-track");
+const viewport = document.getElementById("carousel-viewport");
+const slides = track.children.length;
+let index = 0;
+
+function show() {
+  track.style.transform = `translateY(${-index * viewport.clientHeight}px)`;
+  document.getElementById("carousel-status").textContent = `${index + 1} / ${slides}`;
+}
+
+document.getElementById("carousel-prev").onclick = () => {
+  index = (index - 1 + slides) % slides;
+  show();
+};
+
+document.getElementById("carousel-next").onclick = () => {
+  index = (index + 1 + slides) % slides;
+  show();
+};
+
+show();
