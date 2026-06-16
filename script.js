@@ -37,16 +37,19 @@ const viewport = document.getElementById("carousel-viewport");
 const slides = track.children.length;
 let index = 0;
 
+// shows each card
 function show() {
   track.style.transform = `translateY(${-index * viewport.clientHeight}px)`;
   document.getElementById("carousel-status").textContent = `${index + 1} / ${slides}`;
 }
 
+// cycles backward
 document.getElementById("carousel-prev").onclick = () => {
   index = (index - 1 + slides) % slides;
   show();
 };
 
+// cycles forward
 document.getElementById("carousel-next").onclick = () => {
   index = (index + 1 + slides) % slides;
   show();
