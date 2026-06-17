@@ -41,7 +41,8 @@ let index = 0;
 // shows each card
 function show() {
   track.style.transform = `translateY(${-index * viewport.clientHeight}px)`;
-  document.getElementById("carousel-status").textContent = `${index + 1} / ${slides}`;
+  document.getElementById("carousel-status").textContent =
+    `${index + 1} / ${slides}`;
 }
 
 // cycles backward
@@ -57,3 +58,33 @@ document.getElementById("carousel-next").onclick = () => {
 };
 
 show();
+
+// back to top button
+
+const backToTopButton = document.getElementById("back-to-top");
+
+// when the user scrolls down 300px from the top of the document, show the button
+document.addEventListener("DOMContentLoaded", () => {
+  const backToTopBtn = document.getElementById("back-to-top");
+
+  // only run if the button actually exists on the page
+  if (backToTopBtn) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.remove("hidden");
+        backToTopBtn.classList.add("flex");
+      } else {
+        backToTopBtn.classList.remove("flex");
+        backToTopBtn.classList.add("hidden");
+      }
+    });
+
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+  });
+});
+  }
+});
+
